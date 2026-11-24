@@ -182,14 +182,16 @@ UPSERT_INCIDENT = text("""
          location, raw_payload)
     VALUES
         (:external_id, :hazard_type, :title, :incident_date,
-         (SELECT unit_code FROM admin_units
-           WHERE ST_Contains(geom, ST_SetSRID(ST_MakePoint(:lon, :lat), 4326))
-           ORDER BY CASE admin_level
+            (SELECT unit_code FROM admin_units
+                WHERE ST_DWithin(geom, ST_SetSRID(ST_MakePoint(:lon, :lat), 4326), 0.00001)
+                ORDER BY CASE admin_level
                       WHEN 'ward' THEN 1
                       WHEN 'municipality' THEN 2
                       WHEN 'district' THEN 3
-                      ELSE 4 END
-           LIMIT 1),
+                      ELSE 4 END,
+                    ST_Distance(geom, ST_SetSRID(ST_MakePoint(:lon, :lat), 4326)),
+                    unit_code
+                LIMIT 1),
          :deaths, :injured, :families_affected, :estimated_loss_npr,
          ST_SetSRID(ST_MakePoint(:lon, :lat), 4326),
          CAST(:raw_payload AS jsonb))
