@@ -1,0 +1,24 @@
+{
+  "provinces": [
+    {"code": "NP-P1", "name_en": "Koshi", "name_ne": "कोशी", "population": 4960000, "bbox": [86.4, 26.4, 88.2, 28.1]},
+    {"code": "NP-P2", "name_en": "Madhesh", "name_ne": "मधेश", "population": 6110000, "bbox": [84.7, 26.4, 86.3, 27.0]},
+    {"code": "NP-P3", "name_en": "Bagmati", "name_ne": "बागमती", "population": 6080000, "bbox": [84.4, 27.0, 86.4, 28.4]},
+    {"code": "NP-P4", "name_en": "Gandaki", "name_ne": "गण्डकी", "population": 2470000, "bbox": [83.2, 27.6, 84.4, 29.3]},
+    {"code": "NP-P5", "name_en": "Lumbini", "name_ne": "लुम्बिनी", "population": 5120000, "bbox": [81.7, 27.3, 83.2, 28.7]},
+    {"code": "NP-P6", "name_en": "Karnali", "name_ne": "कर्णाली", "population": 1690000, "bbox": [81.7, 28.7, 83.2, 30.4]},
+    {"code": "NP-P7", "name_en": "Sudurpashchim", "name_ne": "सुदूरपश्चिम", "population": 2690000, "bbox": [80.0, 28.2, 81.7, 29.8]}
+  ],
+  "districts": [
+    {"code": "NP-D-KATHMANDU", "province": "NP-P3", "name_en": "Kathmandu", "name_ne": "काठमाडौं", "population": 2040000, "bbox": [85.15, 27.68, 85.39, 27.85]},
+    {"code": "NP-D-LALITPUR", "province": "NP-P3", "name_en": "Lalitpur", "name_ne": "ललितपुर", "population": 550000, "bbox": [85.15, 27.40, 85.39, 27.68]},
+    {"code": "NP-D-BHAKTAPUR", "province": "NP-P3", "name_en": "Bhaktapur", "name_ne": "भक्तपुर", "population": 430000, "bbox": [85.39, 27.60, 85.55, 27.75]},
+    {"code": "NP-D-CHITWAN", "province": "NP-P3", "name_en": "Chitwan", "name_ne": "चितवन", "population": 720000, "bbox": [84.4, 27.3, 85.0, 27.8]},
+    {"code": "NP-D-SUNSARI", "province": "NP-P1", "name_en": "Sunsari", "name_ne": "सुनसरी", "population": 810000, "bbox": [87.0, 26.5, 87.4, 26.9]},
+    {"code": "NP-D-KASKI", "province": "NP-P4", "name_en": "Kaski", "name_ne": "कास्की", "population": 600000, "bbox": [83.7, 28.0, 84.3, 28.5]}
+  ],
+  "municipalities": [
+    {"code": "NP-M-KATHMANDU-MC", "district": "NP-D-KATHMANDU", "name_en": "Kathmandu Metropolitan City", "name_ne": "काठमाडौं महानगरपालिका", "short_ne": "काठमाडौं", "short_en": "Kathmandu", "population": 845000, "bbox": [85.26, 27.68, 85.38, 27.76], "wards": 32, "grid": [8, 4]},
+    {"code": "NP-M-LALITPUR-MC", "district": "NP-D-LALITPUR", "name_en": "Lalitpur Metropolitan City", "name_ne": "ललितपुर महानगरपालिका", "short_ne": "ललितपुर", "short_en": "Lalitpur", "population": 300000, "bbox": [85.28, 27.62, 85.36, 27.68], "wards": 29, "grid": [6, 5]},
+    {"code": "NP-M-BHAKTAPUR", "district": "NP-D-BHAKTAPUR", "name_en": "Bhaktapur Municipality", "name_ne": "भक्तपुर नगरपालिका", "short_ne": "भक्तपुर", "short_en": "Bhaktapur", "population": 82000, "bbox": [85.40, 27.65, 85.46, 27.70], "wards": 10, "grid": [5, 2]}
+  ]
+}
