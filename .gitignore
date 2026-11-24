@@ -1,0 +1,25 @@
+# Secrets: never commit these
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Node
+node_modules/
+.next/
+out/
+
+# Uploaded files and OS junk
+uploads/
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
