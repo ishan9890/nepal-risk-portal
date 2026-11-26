@@ -59,3 +59,14 @@ def test_unit_detail(client):
 
 def test_unknown_unit_is_404(client):
     assert client.get("/api/v1/admin-units/DOES-NOT-EXIST").status_code == 404
+
+def test_weather_unknown_unit_is_404(client):
+    assert client.get("/api/v1/weather/DOES-NOT-EXIST").status_code == 404
+
+
+def test_classify_rainfall():
+    from app.services.weather import classify_rainfall
+    assert classify_rainfall(10) == "low"
+    assert classify_rainfall(60) == "moderate"
+    assert classify_rainfall(150) == "high"
+    assert classify_rainfall(250) == "extreme"
